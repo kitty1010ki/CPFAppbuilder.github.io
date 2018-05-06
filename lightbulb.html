@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>小夜燈</title>
+</head>
+<body>
+  <div class="analogclass">
+    光照指數:
+    <span class="analogvalue" id="lightvalue">none</span><br>
+  </div>
+
+
+  <script>
+  	var lightdata;
+  	setup();
+
+  	// Analog
+  	function loop() {
+  		if(cpf){
+
+  			lightdata = cpf.get("light sensor");
+  			document.getElementById("lightvalue").innerHTML = lightdata;
+  		}
+  		setTimeout(loop, 1000);
+  	}
+  	loop();
+
+
+  	// light
+  	function lightonoff() {
+  		var onlight = document.getElementById("rled").value;
+
+  		document.getElementById("bluevalue").innerHTML = Bled;
+
+  		if(cpf){
+  			cpf.setChainableLed("0," + Rled + "," + Gled + "," + Bled + ";");
+  		}
+
+  	}
+
+
+  	// cpf setup
+  	function setup(){
+  		if(cpf)
+  			cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "analog", 1,"INPUT"],["grove_newChainableLED", 7, 8, 1]');
+  			//document.getElementById("demo").innerHTML += ret + "<br>";
+  	}
+
+  </script>
+</body>
+</html>
