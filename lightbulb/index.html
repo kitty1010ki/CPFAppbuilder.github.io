@@ -24,7 +24,7 @@
 
 	<script>
 		var lightdata;
-
+		var lightbuld=document.getElementById("myimg");
 		setup();
 
 		// Analog
@@ -33,7 +33,6 @@
 
 				lightdata = cpf.get("a0");
 				document.getElementById("lightvalue").innerHTML = lightdata;
-				var lightbuld=document.getElementById("myimg");
 
 				if (lightdata < 500) {
 					cpf.set("rgb led",255,215,0);
