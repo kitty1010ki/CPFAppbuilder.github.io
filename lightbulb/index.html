@@ -32,12 +32,12 @@
 					document.getElementById("lightvalue").innerHTML = lightdata;
 					document.getElementsByTagName('img')[0].setAttribute('src','./images/darkbuld.png');
 					if (lightdata < 500) {
-						cpf.request('["grove_rgblcd_set_rgb", 255, 0, 0]');
+						cpf.set("rgb led",255,215,0);
 						// cpf.set("d7",0,0,0);	
 						// cpf.request('["digitalWrite", 7, 1]');
 					}
 					else {
-						cpf.request('["grove_rgblcd_set_rgb", 0, 0, 0]');					
+						cpf.set("rgb led",0,0,0);					
 						// cpf.request('["digitalWrite", 7, 0]');
 					}
 				}
@@ -63,7 +63,7 @@
 			// cpf setup
 			function setup() {
 				if (cpf)
-					cpf.setPinMode('["resetP, "INPUT"],["grove_newChainableLED",7, 8, 1]');
+					cpf.setPinMode('["resetP, "INPUT"],["setPinMode", "digital", 7, "OUTPUT"],["grove_setColorRGB", 0, 0, 0]');
 				//document.getElementById("demo").innerHTML += ret + "<br>"in"],["setPinMode", "analog", 0;
 			}
 		</script>
