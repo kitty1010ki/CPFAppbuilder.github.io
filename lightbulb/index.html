@@ -24,7 +24,7 @@
 
 	<script>
 		var lightdata;
-		var lightbuld=document.getElementsByName('buld')
+		// var lightbuld=document.getElementsByName('buld')
 		setup();
 
 		// Analog
@@ -36,12 +36,13 @@
 
 				if (lightdata < 500) {
 					cpf.set("rgb led",255,215,0);
-					lightbuld.src="./images/lightbuld.png";
+					// lightbuld.src="./images/lightbuld.png";
 					//cpf.request('["digitalWrite", 7, 1]');
 				}
 				else {
 					cpf.set("d7",0,0,0);
-					lightbuld.src="./images/darkbuld.png";					
+					// lightbuld.src="./images/darkbuld.png";				
+					// cpf.request('["grove_setColorRGB", 0, 255, 255, 255]');
 					// cpf.request('["digitalWrite", 7, 0]');
 				}
 			}
