@@ -44,26 +44,11 @@
 			setTimeout(loop, 1000);
 		}
 		loop();
-		//light turn on|off
-		// function light() {
-		// 	if (cpf) {
-		// 		if (lightdata < 100) {
-		// 			cpf.set("rgb led",255,255,255);
-		// 			// cpf.request('["digitalWrite", 7, 1]');
-		// 			//更改圖片
-		// 			$('img').attr('src', './images/lightbuld.png');
-		// 			$('img').attr('src');
-		// 		}
-		// 		else {
-		// 			cpf.set("rgb led",0,0,0);					
-		// 			// cpf.request('["digitalWrite", 7, 1]');
-		// 		}
-		// 	}
-		// }
+		
 		// cpf setup
 		function setup() {
 			if (cpf)
-				cpf.setPinMode('["resetP, "INPUT"],["setPinMode", "digital", 7, "OUTPUT"],["grove_setColorRGB", 0, 0, 0]');
+				cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["grove_newChainableLED", 7, 8, 1]');
 			//document.getElementById("demo").innerHTML += ret + "<br>"in"],["setPinMode", "analog", 0;
 		}
 	</script>
