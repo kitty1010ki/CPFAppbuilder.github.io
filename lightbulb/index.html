@@ -12,7 +12,7 @@
 
 <body>
 	<header>
-		<img src="./images/darkbuld.png">
+		<img id="myimg" name="darkbuld" src="./images/darkbuld.png">
 	</header>
 	<div class="analogclass">
 		<div class="flexbox">
@@ -33,14 +33,17 @@
 
 				lightdata = cpf.get("a0");
 				document.getElementById("lightvalue").innerHTML = lightdata;
+				var lightbuld=document.getElementById("myimg");
 
 				if (lightdata < 500) {
 					cpf.set("rgb led",255,215,0);
+					lightbuld.src="./images/lightbuld.png";
 					//cpf.request('["digitalWrite", 7, 1]');
 				}
 				else {
-					cpf.set("d7",0,0,0);					
-					//cpf.request('["digitalWrite", 7, 0]');
+					cpf.set("d7",0,0,0);
+					lightbuld.src="./images/darkbuld.png";					
+					// cpf.request('["digitalWrite", 7, 0]');
 				}
 			}
 			setTimeout(loop, 1000);
