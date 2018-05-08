@@ -54,7 +54,18 @@
 		// cpf setup
 		function setup() {
 			if (cpf)
-				cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["grove_newChainableLED", 7, 8, 1]');			
+				cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["grove_newChainableLED", 7, 8, 1]');
+
+				if (lightdata < 500) {
+					
+					cpf.request('["grove_setColorRGB", 0, 125, 255, 0]');
+					// cpf.request('["digitalWrite", 7, 1]');
+				}
+				else {
+					cpf.request('["grove_setColorRGB", 0, 255, 255, 255]');
+											
+					// cpf.request('["digitalWrite", 7, 0]');
+				}			
 		}
 	</script>
 </body>
