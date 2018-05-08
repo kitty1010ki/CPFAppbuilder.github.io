@@ -13,7 +13,7 @@
   </header>
   <div class="analogclass">
     <div class="flexbox">
-      <span class="analogvalue" id="lightvalue">none</span>
+      <span class="analogvalue" id="lightvalue"></span>
       <p>lightbuld</p>
     </div>
 
@@ -32,6 +32,8 @@
   			lightdata = cpf.get("light sensor");
   			document.getElementById("lightvalue").innerHTML = lightdata;
         document.getElementsByTagName('img')[0].setAttribute('src','./images/darkbuld.png');
+
+				light();
   		}
   		setTimeout(loop, 1000);	
   	}
@@ -60,7 +62,7 @@
   	// cpf setup
   	function setup(){
   		if(cpf)
-  			cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["grove_setColorRGB", 255, 215, 0]');
+  			cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["grove_setColorRGB", 0, 215, 255]');
   			//document.getElementById("demo").innerHTML += ret + "<br>";
   	}
 
