@@ -47,7 +47,7 @@
 		//light turn on|off
 		function light() {
 
-			if (cpf) {
+			// if (cpf) {
 				if (lightdata < 100) {
 					// cpf.set("rgb led",255,215,0);
 					cpf.request('["digitalWrite", 7, 1]');
@@ -60,7 +60,7 @@
 					// cpf.set("rgb led",0,0,0);					
 					cpf.request('["digitalWrite", 7, 1]');
 				}
-			}
+			// }
 		}
 
 
