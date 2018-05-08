@@ -36,7 +36,7 @@
 
 				// document.getElementsByTagName('img')[0].setAttribute('src','./images/darkbuld.png');
 
-				if (lightdata < 500) {
+				if (lightdata < 100) {
 					
 					cpf.request('["grove_setColorRGB", 0, 125, 255, 0]');
 					// cpf.request('["digitalWrite", 7, 1]');
@@ -47,7 +47,7 @@
 					// cpf.request('["digitalWrite", 7, 0]');
 				}
 			}
-			setTimeout(loop, 1000);
+			setTimeout(loop, 100);
 		}
 		loop();
 		
