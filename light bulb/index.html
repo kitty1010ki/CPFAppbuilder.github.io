@@ -36,7 +36,7 @@
 				document.getElementById("lightvalue").innerHTML = lightdata;
 				// document.getElementsByTagName('img')[0].setAttribute('src','./images/darkbuld.png');
 
-				// light();
+				light();
 			}
 			setTimeout(loop, 1000);
 		}
@@ -45,21 +45,21 @@
 
 
 		//light turn on|off
-		// function light(){
+		function light(){
 
-		// 	if(cpf){
-		// 		if(lightdata<100){
-		// 			cpf.set("rgb led",255,215,0);
+			if(cpf){
+				if(lightdata<100){
+					cpf.set("rgb led",255,215,0);
 
-		// 			//更改圖片
-		// 			$('img').attr('src','./images/lightbuld.png');
-		// 			$('img').attr('src');
-		// 			}
-		// 			else{
-		// 				cpf.set("rgb led",0,0,0);					
-		// 			}		
-		// 	}			
-		// }
+					//更改圖片
+					$('img').attr('src','./images/lightbuld.png');
+					$('img').attr('src');
+					}
+					else{
+						cpf.set("rgb led",0,0,0);					
+					}		
+			}			
+		}
 
 
 		// cpf setup
