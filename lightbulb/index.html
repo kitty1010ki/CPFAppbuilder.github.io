@@ -12,7 +12,7 @@
 
 <body>
 	<header>
-		<img src="./images/darkbuld.png">
+		<img id="image01" src="./images/darkbuld.png"/>
 	</header>
 	<div class="analogclass">
 		<div class="flexbox">
@@ -24,6 +24,7 @@
 
 	<script>
 			var lightdata;
+			var elem=document.getElementById("image01");
 			setup();
 		
 			// Analog
@@ -37,10 +38,12 @@
 					if (lightdata < 100) 
 					{						
 						cpf.request('["digitalWrite", 7, 1]');
+						elem.src="./images/lightbuld.png";
 					}
 					else 
 					{				
 						cpf.request('["digitalWrite", 7, 0]');
+						elem.src="./images/darkbuld.png";
 					}
 				}
 				setTimeout(loop, 100);
