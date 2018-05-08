@@ -37,18 +37,6 @@
   	loop();
 
 
-  	// light
-  	function lightonoff() {
-  		var onlight = document.getElementById("rled").value;
-
-  		document.getElementById("bluevalue").innerHTML = Bled;
-
-  		if(cpf){
-  			cpf.setChainableLed("0," + Rled + "," + Gled + "," + Bled + ";");
-  		}
-
-  	}
-
     //更改圖片
     $('img').attr('src','./images/lightbuld.png');//把src属性更改为'6.jpg';
     $('img').attr('src');//获得src属性为'6.jpg';
