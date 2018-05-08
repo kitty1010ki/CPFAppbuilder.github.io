@@ -26,14 +26,19 @@
 			var lightdata;
 			setup();
 			// Analog
-			function loop() {
-				if (cpf) {
+			function loop() 
+		        {
+				if (cpf) 
+				{
 					lightdata = cpf.get("a0");
 					document.getElementById("lightvalue").innerHTML = lightdata;
-					if (lightdata < 100) {						
+					
+					if (lightdata < 100) 
+					{						
 						cpf.request('["digitalWrite", 7, 1]');
 					}
-					else {				
+					else 
+					{				
 						cpf.request('["digitalWrite", 7, 0]');
 					}
 				}
@@ -42,9 +47,12 @@
 			loop();
 			
 			// cpf setup
-			function setup() {
+			function setup() 
+			{
 				if (cpf)
+				{
 					cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "digital", 7, "OUTPUT"]');
+				}
 			}
 		</script>
 </body>
