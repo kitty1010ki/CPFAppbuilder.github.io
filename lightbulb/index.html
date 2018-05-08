@@ -23,41 +23,49 @@
 	</div>
 
 	<script>
-		var lightdata;
-		// var lightbuld=document.getElementsByName('buld')
-		setup();
-
-		// Analog
-		function loop() {
-			if (cpf) {
-
-				lightdata = cpf.get("a0");
-				document.getElementById("lightvalue").innerHTML = lightdata;
-
-				if (lightdata < 500) {
-					cpf.set("rgb led",255,215,0);
-					// lightbuld.src="./images/lightbuld.png";
-					//cpf.request('["digitalWrite", 7, 1]');
+			var lightdata;
+			setup();
+			// Analog
+			function loop() {
+				if (cpf) {
+					lightdata = cpf.get("a0");
+					document.getElementById("lightvalue").innerHTML = lightdata;
+					// document.getElementsByTagName('img')[0].setAttribute('src','./images/darkbuld.png');
+					if (lightdata < 100) {
+						// cpf.set("rgb led",255,215,0);
+						cpf.request('["digitalWrite", 7, 1]');
+					}
+					else {
+						// cpf.set("rgb led",0,0,0);					
+						cpf.request('["digitalWrite", 7, 0]');
+					}
 				}
-				else {
-					cpf.set("d7",0,0,0);
-					// lightbuld.src="./images/darkbuld.png";				
-					// cpf.request('["grove_setColorRGB", 0, 255, 255, 255]');
-					// cpf.request('["digitalWrite", 7, 0]');
-				}
+				setTimeout(loop, 1000);
 			}
-			setTimeout(loop, 1000);
-		}
-		loop();
-
-		
-		function setup() {
-			if (cpf)
-				// cpf.setPinMode('["resetPin"],["grove_newChainableLED",0,0,0]');
-				cpf.setPinMode('["resetP, "INPUT"],["setPinMode", "digital", 7, "OUTPUT"],["grove_setColorRGB", 0, 0, 0]')
-		}
-
-	</script>
+			loop();
+			//light turn on|off
+			// function light() {
+			// 	if (cpf) {
+			// 		if (lightdata < 100) {
+			// 			cpf.set("rgb led",255,255,255);
+			// 			// cpf.request('["digitalWrite", 7, 1]');
+			// 			//更改圖片
+			// 			$('img').attr('src', './images/lightbuld.png');
+			// 			$('img').attr('src');
+			// 		}
+			// 		else {
+			// 			cpf.set("rgb led",0,0,0);					
+			// 			// cpf.request('["digitalWrite", 7, 1]');
+			// 		}
+			// 	}
+			// }
+			// cpf setup
+			function setup() {
+				if (cpf)
+					cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "digital", 7, "OUTPUT"]');
+				//document.getElementById("demo").innerHTML += ret + "<br>";,["grove_setColorRGB", 0, 0, 0]
+			}
+		</script>
 </body>
 
 </html>
