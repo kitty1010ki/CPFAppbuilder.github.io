@@ -25,6 +25,7 @@
 	<script>
 			var lightdata;
 			setup();
+		
 			// Analog
 			function loop() 
 		        {
@@ -42,7 +43,7 @@
 						cpf.request('["digitalWrite", 7, 0]');
 					}
 				}
-				setTimeout(loop, 1000);
+				setTimeout(loop, 100);
 			}
 			loop();
 			
