@@ -36,12 +36,13 @@
 				// document.getElementsByTagName('img')[0].setAttribute('src','./images/darkbuld.png');
 
 				if (lightdata < 100) {
-					cpf.set("rgb led",255,215,0);
+					// cpf.set("rgb led",255,215,0);
+					cpf.set("rgb led",0,0,0);	
 					// cpf.request('["digitalWrite", 7, 1]');
 				}
 				else {
-					// cpf.set("rgb led",0,0,0);					
-					cpf.request('["digitalWrite", 7, 0]');
+					cpf.set("rgb led",0,0,0);					
+					// cpf.request('["digitalWrite", 7, 0]');
 				}
 			}
 			setTimeout(loop, 1000);
