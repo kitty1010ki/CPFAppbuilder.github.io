@@ -36,8 +36,7 @@
 
 				// document.getElementsByTagName('img')[0].setAttribute('src','./images/darkbuld.png');
 
-				if (lightdata < 500) {
-					
+				if (lightdata < 100) {			
 					
 					cpf.request('["digitalWrite", 7, 1]');
 				}
@@ -53,9 +52,7 @@
 		// cpf setup
 		function setup() {
 			if (cpf)
-				cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "digital", 7, "OUTPUT"]');
-
-					
+				cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "digital", 7, "OUTPUT"]');					
 		}
 	</script>
 </body>
