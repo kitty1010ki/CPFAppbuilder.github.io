@@ -24,7 +24,7 @@
 
 	<script>
 			var lightdata;
-			var elem=document.getElementById("image01");
+			var elem;
 			setup();
 		
 			// Analog
@@ -32,8 +32,10 @@
 		        {
 				if (cpf) 
 				{
-					lightdata = cpf.get("a0");
+					lightdata = cpf.get("a0");					
 					document.getElementById("lightvalue").innerHTML = lightdata;
+					
+					elem=document.getElementById("image01")
 					
 					if (lightdata < 100) 
 					{						
