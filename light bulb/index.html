@@ -36,10 +36,22 @@
   	}
   	loop();
 
+		//light turn on /off
+		function light(){
+			if(lightdata<100){
+				cpf.set("rgb led",255,215,0);
+				$('img').attr('src','./images/lightbuld.png');//把src属性更改为'6.jpg';
+    		$('img').attr('src');//获得src属性为'6.jpg';
+			}
+			else{
+				cpf.set("rgb led",0,0,0);
+			}
+
+		}
+
 
     //更改圖片
-    $('img').attr('src','./images/lightbuld.png');//把src属性更改为'6.jpg';
-    $('img').attr('src');//获得src属性为'6.jpg';
+    
 
 
   	// cpf setup
