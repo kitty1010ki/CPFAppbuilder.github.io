@@ -39,16 +39,16 @@
 				// light();
 
 				if (lightdata < 100) {
-					// cpf.set("rgb led",255,215,0);
-					cpf.request('["digitalWrite", 7, 1]');
+					cpf.set("rgb led",255,215,0);
+					// cpf.request('["digitalWrite", 7, 1]');
 
 					//更改圖片
 					$('img').attr('src', './images/lightbuld.png');
 					$('img').attr('src');
 				}
 				else {
-					// cpf.set("rgb led",0,0,0);					
-					cpf.request('["digitalWrite", 7, 0]');
+					cpf.set("rgb led",0,0,0);					
+					// cpf.request('["digitalWrite", 7, 0]');
 				}
 			}
 			setTimeout(loop, 1000);
@@ -62,16 +62,16 @@
 
 			if (cpf) {
 				if (lightdata < 100) {
-					// cpf.set("rgb led",255,215,0);
-					cpf.request('["digitalWrite", 7, 1]');
+					cpf.set("rgb led",255,255,255);
+					// cpf.request('["digitalWrite", 7, 1]');
 
 					//更改圖片
 					$('img').attr('src', './images/lightbuld.png');
 					$('img').attr('src');
 				}
 				else {
-					// cpf.set("rgb led",0,0,0);					
-					cpf.request('["digitalWrite", 7, 1]');
+					cpf.set("rgb led",0,0,0);					
+					// cpf.request('["digitalWrite", 7, 1]');
 				}
 			}
 		}
@@ -80,8 +80,8 @@
 		// cpf setup
 		function setup() {
 			if (cpf)
-				cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "digital", 7, "OUTPUT"]');
-			//document.getElementById("demo").innerHTML += ret + "<br>";,["grove_setColorRGB", 0, 215, 255]
+				cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "digital", 7, "OUTPUT"]',["grove_setColorRGB", 0, 0, 0]);
+			//document.getElementById("demo").innerHTML += ret + "<br>";
 		}
 
 	</script>
