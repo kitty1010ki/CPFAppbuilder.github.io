@@ -21,7 +21,46 @@
             <h3>Temperature:<span id="temp">none</span>°C</h3>
         </div>
     </div>
+    <script>
+        var celsius=0;
+        var degree=0;
+        setup();
+
+        function loop(){
+            if(cpf){
+                tempdata= cpf.get("temperature sensor");
+                celsius = toCelsius(tempdata);
+                document.getElementById("temp").innerHTML = celsius;
+                
+                if(celsius >= -30 && celsius <= 50){
+                    degree=Math.floor((180/80)*celsius+67.5);
+                    document.getElementById("pointer").style.transform="rotate("+degree+"deg)";
+                    document.getElementById("degree").innerHTML= degree;
+                    cpf.request('["analogWrite",4,'+ Math.abs(degree-180)+']']);
+                }
+            }
+            setTimeout(loop,1000);
+        }
+        loop();
+
+        // Temperature
+	    function toCelsius(value) {
+		    var resistance = parseFloat((1023-value) * 10000 / value);
+		    var temperature = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
+		
+		    return temperature.toFixed(2);
+	    }
+
+        //cpf setup
+        function setup() {
+            if(cpf){
+                cpf.setPinMode('["resetPin"] ,["setPinMode", "analog", 1,"INPUT"], ["setPinMode", "digital", 4, "SERVO"]');
+
+            }
+            
+        }
     
+    </script>
     
 </body>
 </html>
