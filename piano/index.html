@@ -25,11 +25,13 @@
 
 	<script>
 			var tone;
+            var changeimg;
 
 			setup();
 
             function voice(){
                 cpf.request('["tone_play", 6, 261, 100]');
+                changeimg.src="./img/1do.jpg";
             }
 
              function voice1(){
