@@ -11,14 +11,14 @@
 <body>
     <div id="wrap">
 	    <div class="keyboard">
-            <img src="img/1.1do.jpg" onclick="voice()">
-            <img src="img/2.1Re.jpg" onclick="voice1()">
-            <img src="img/3.1Mi.jpg" onclick="voice2()">
-            <img src="img/4.1Fa.jpg" onclick="voice3()">
-            <img src="img/5.1Sol.jpg" onclick="voice4()">
-            <img src="img/6.1La.jpg" onclick="voice5()">
-            <img src="img/7.1Si.jpg" onclick="voice6()">
-            <img src="img/1.1do.jpg" onclick="voice7()">
+            <img id="img1" src="img/1.1do.jpg" onclick="voice()">
+            <img id="img2" src="img/2.1Re.jpg" onclick="voice1()">
+            <img id="img3" src="img/3.1Mi.jpg" onclick="voice2()">
+            <img id="img4" src="img/4.1Fa.jpg" onclick="voice3()">
+            <img id="img5" src="img/5.1Sol.jpg" onclick="voice4()">
+            <img id="img6" src="img/6.1La.jpg" onclick="voice5()">
+            <img id="img7" src="img/7.1Si.jpg" onclick="voice6()">
+            <img id="img8" src="img/1.1do.jpg" onclick="voice7()">
 		
         </div>
     </div>
@@ -31,41 +31,64 @@
 
             function voice(){
                 cpf.request('["tone_play", 6, 261, 100]');
+                changeimg=document.getElementById("img1")
                 changeimg.src="./img/1do.jpg";
+                setTimeout(function(){ changeimg.src="./img/1.1do.jpg"}, 100);
             }
 
              function voice1(){
                 cpf.request('["tone_play", 6, 293, 100]');
+                changeimg=document.getElementById("img2")
                 changeimg.src="./img/2Re.jpg";
+                setTimeout(function(){ changeimg.src="./img/2.1Re.jpg"}, 100);
             }
             
             function voice2(){
                 cpf.request('["tone_play", 6, 329, 100]');
+                changeimg=document.getElementById("img3")
                 changeimg.src="./img/3Mi.jpg";
+                setTimeout(function(){ changeimg.src="./img/3.1Mi.jpg"}, 100);
+
             }
 
             function voice3(){
                 cpf.request('["tone_play", 6, 349, 100]');
+                changeimg=document.getElementById("img4")
+                changeimg.src="./img/4Fa.jpg";
+                setTimeout(function(){ changeimg.src="./img/4.1Fa.jpg"}, 100);
+                
             }
 
             function voice4(){
                 cpf.request('["tone_play", 6, 392, 100]');
+                changeimg=document.getElementById("img5")
+                changeimg.src="./img/5sol.jpg";
+                setTimeout(function(){ changeimg.src="./img/5.1Sol.jpg"}, 100);
             }  
 
             function voice5(){
                 cpf.request('["tone_play", 6, 440, 100]');
+                changeimg=document.getElementById("img6")
+                changeimg.src="./img/6La.jpg";
+                setTimeout(function(){ changeimg.src="./img/6.1LaFa.jpg"}, 100);
             }   
 
             function voice6(){
                 cpf.request('["tone_play", 6, 493, 100]');
+                changeimg=document.getElementById("img7")
+                changeimg.src="./img/7Si.jpg";
+                setTimeout(function(){ changeimg.src="./img/7.1Si.jpg"}, 100);
             } 
 
             function voice7(){
                 cpf.request('["tone_play", 6, 523, 100]');
+                changeimg=document.getElementById("img8")
+                changeimg.src="./img/8do.jpg";
+                setTimeout(function(){ changeimg.src="./img/1.1do.jpg"}, 100);
             }           
 
        
-        
+      
 		
 		
 			// function loop() 
