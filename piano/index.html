@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Piano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+	    <div class="keyboard">
+            <img src="img/1.1do.jpg" onclick="voice()">
+            <img src="img/2.1Re.jpg" onclick="voice1()">
+            <img src="img/3.1Mi.jpg" onclick="voice2()">
+            <img src="img/4.1Fa.jpg" onclick="voice3()">
+            <img src="img/5.1Sol.jpg" onclick="voice4()">
+            <img src="img/6.1La.jpg" onclick="voice5()">
+            <img src="img/7.1Si.jpg" onclick="voice6()">
+            <img src="img/1.1do.jpg" onclick="voice7()">
+		
+        </div>
+    </div>
+
+	<script>
+			var tone;
+
+			setup();
+
+            function voice(){
+                cpf.request('["tone_play", 6, 261, 100]');
+            }
+
+             function voice1(){
+                cpf.request('["tone_play", 6, 293, 100]');
+            }
+            
+            function voice2(){
+                cpf.request('["tone_play", 6, 329, 100]');
+            }
+
+            function voice3(){
+                cpf.request('["tone_play", 6, 349, 100]');
+            }
+
+            function voice4(){
+                cpf.request('["tone_play", 6, 392, 100]');
+            }  
+
+            function voice5(){
+                cpf.request('["tone_play", 6, 440, 100]');
+            }   
+
+            function voice6(){
+                cpf.request('["tone_play", 6, 493, 100]');
+            } 
+
+            function voice7(){
+                cpf.request('["tone_play", 6, 523, 100]');
+            }            
+
+       
+        
+		
+			// Analog
+			function loop() 
+		    {
+				if (cpf) 
+				{
+					lightdata = cpf.get("a0");					
+					document.getElementById("lightvalue").innerHTML = lightdata;
+					
+					elem=document.getElementById("image01")
+					
+					if (lightdata < 100) 
+					{						
+						cpf.request('["digitalWrite", 7, 1]');
+						elem.src="./images/lightbuld.png";
+					}
+					else 
+					{				
+						cpf.request('["digitalWrite", 7, 0]');
+						elem.src="./images/darkbuld.png";
+					}
+				}
+				setTimeout(loop, 100);
+			}
+			loop();
+			
+			// cpf setup
+			function setup() 
+			{
+				if (cpf)
+                cpf.setPinMode('["resetPin"],["setPinMode", "digital", 6, "TONE"] ');				
+			}
+
+
+
+
+           
+           // cpf.request('["tone_play", 6, 261, 100],["sleep", 300],["tone_play", 6, 293, 300],["sleep", 300],["tone_play", 6, 329, 300],["sleep", 300],["tone_play", 6, 349, 300],["sleep", 300],["tone_play", 6, 392, 300],["sleep", 300],["tone_play", 6, 440, 300],["sleep", 300],["tone_play", 6, 493, 300],["sleep", 300],["tone_play", 6, 349, 523]'); 
+
+
+        
+		</script>
+</body>
+</html>
