@@ -21,6 +21,8 @@
             <img id="img8" src="img/1.1do.jpg" onclick="voice7()">
 		
         </div>
+
+        <button id=play onclick="music()">Play</button>
     </div>
 
 	<script>
@@ -30,54 +32,54 @@
 			setup();
 
             function voice(){
-                cpf.request('["tone_play", 6, 261, 100]');
+                cpf.request('["tone_play", 6, 261, 150]');
                 changeimg=document.getElementById("img1")
                 changeimg.src="./img/1do.jpg";
-                setTimeout(function(){ changeimg.src="./img/1.1do.jpg"}, 100);
+                setTimeout(function(){ changeimg.src="./img/1.1do.jpg"}, 150);
             }
 
              function voice1(){
-                cpf.request('["tone_play", 6, 293, 100]');
+                cpf.request('["tone_play", 6, 293, 150]');
                 changeimg=document.getElementById("img2")
                 changeimg.src="./img/2Re.jpg";
-                setTimeout(function(){ changeimg.src="./img/2.1Re.jpg"}, 100);
+                setTimeout(function(){ changeimg.src="./img/2.1Re.jpg"}, 150);
             }
             
             function voice2(){
-                cpf.request('["tone_play", 6, 329, 100]');
+                cpf.request('["tone_play", 6, 329, 150]');
                 changeimg=document.getElementById("img3")
                 changeimg.src="./img/3Mi.jpg";
-                setTimeout(function(){ changeimg.src="./img/3.1Mi.jpg"}, 100);
+                setTimeout(function(){ changeimg.src="./img/3.1Mi.jpg"}, 150);
 
             }
 
             function voice3(){
-                cpf.request('["tone_play", 6, 349, 100]');
+                cpf.request('["tone_play", 6, 349, 150]');
                 changeimg=document.getElementById("img4")
                 changeimg.src="./img/4Fa.jpg";
-                setTimeout(function(){ changeimg.src="./img/4.1Fa.jpg"}, 100);
+                setTimeout(function(){ changeimg.src="./img/4.1Fa.jpg"}, 150);
                 
             }
 
             function voice4(){
-                cpf.request('["tone_play", 6, 392, 100]');
+                cpf.request('["tone_play", 6, 392, 150]');
                 changeimg=document.getElementById("img5")
                 changeimg.src="./img/5sol.jpg";
-                setTimeout(function(){ changeimg.src="./img/5.1Sol.jpg"}, 100);
+                setTimeout(function(){ changeimg.src="./img/5.1Sol.jpg"}, 150);
             }  
 
             function voice5(){
-                cpf.request('["tone_play", 6, 440, 100]');
+                cpf.request('["tone_play", 6, 440, 150]');
                 changeimg=document.getElementById("img6")
                 changeimg.src="./img/6La.jpg";
-                setTimeout(function(){ changeimg.src="./img/6.1LaFa.jpg"}, 100);
+                setTimeout(function(){ changeimg.src="./img/6.1La.jpg"}, 150);
             }   
 
             function voice6(){
-                cpf.request('["tone_play", 6, 493, 100]');
+                cpf.request('["tone_play", 6, 493, 150]');
                 changeimg=document.getElementById("img7")
                 changeimg.src="./img/7Si.jpg";
-                setTimeout(function(){ changeimg.src="./img/7.1Si.jpg"}, 100);
+                setTimeout(function(){ changeimg.src="./img/7.1Si.jpg"}, 150);
             } 
 
             function voice7(){
@@ -85,36 +87,14 @@
                 changeimg=document.getElementById("img8")
                 changeimg.src="./img/8do.jpg";
                 setTimeout(function(){ changeimg.src="./img/1.1do.jpg"}, 100);
-            }           
+            }  
 
-       
-      
+            function music(){
+                cpf.request('["tone_play", 6, 261, 300],["sleep", 300],["tone_play", 6, 293, 300],["sleep", 300],["tone_play", 6, 329, 300],["sleep", 300],["tone_play", 6, 349, 300],["sleep", 300],["tone_play", 6, 392, 300],["sleep", 300],["tone_play", 6, 440, 300],["sleep", 300],["tone_play", 6, 493, 300],["sleep", 300],["tone_play", 6, 349, 523]'); 
+
+            }        
 		
 		
-			// function loop() 
-		    // {
-			// 	if (cpf) 
-			// 	{
-			// 		lightdata = cpf.get("a0");					
-			// 		document.getElementById("lightvalue").innerHTML = lightdata;
-					
-			// 		elem=document.getElementById("image01")
-					
-			// 		if (lightdata < 100) 
-			// 		{						
-			// 			cpf.request('["digitalWrite", 7, 1]');
-			// 			elem.src="./images/lightbuld.png";
-			// 		}
-			// 		else 
-			// 		{				
-			// 			cpf.request('["digitalWrite", 7, 0]');
-			// 			elem.src="./images/darkbuld.png";
-			// 		}
-			// 	}
-			// 	setTimeout(loop, 100);
-			// }
-			// loop();
-			
 			// cpf setup
 			function setup() 
 			{
