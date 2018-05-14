@@ -10,10 +10,10 @@
 </head>
 <body>
   <div class="container">
-    <p>Piano</p>
+    <p>Piano2</p>
 <div class="painocontainer">
 
-  <div class="keybord" onclick="voice()"></div>
+  <li class="keybord" onclick="voice()"></div>
   <div class="keybord" onclick="voice1()"></div>
   <div class="keybord" onclick="voice2()"></div>
   <div class="keybord" onclick="voice3()"></div>
@@ -26,10 +26,8 @@
   
   
   <script>
-			var tone;
-            var changeimg;
-
-			setup();
+	    var tone;
+	    setup();
 
             function voice(){
                 cpf.request('["tone_play", 6, 261, 150]');                             
