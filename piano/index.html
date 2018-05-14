@@ -13,15 +13,74 @@
     <p>Piano</p>
 <div class="painocontainer">
 
-  <div class="keybord" id="keyboraddo"></div>
-  <div class="keybord" id="keyboradre"></div>
-  <div class="keybord" id="keyboradmi"></div>
-  <div class="keybord" id="keyboradfa"></div>
-  <div class="keybord" id="keyboradso"></div>
-  <div class="keybord" id="keyboradla"></div>
-  <div class="keybord" id="keyboradshi"></div>
+  <div class="keybord" onclick="voice()"></div>
+  <div class="keybord" onclick="voice1()"></div>
+  <div class="keybord" onclick="voice2()"></div>
+  <div class="keybord" onclick="voice3()"></div>
+  <div class="keybord" onclick="voice4()"></div>
+  <div class="keybord" onclick="voice5()"></div>
+  <div class="keybord" onclick="voice6()"></div>
+  <div class="keybord" onclick="voice7()"></div>
 </div>
   </div>
+  
+  
+  <script>
+			var tone;
+            var changeimg;
+
+			setup();
+
+            function voice(){
+                cpf.request('["tone_play", 6, 261, 150]');                             
+            }
+
+             function voice1(){
+                cpf.request('["tone_play", 6, 293, 150]');
+            }
+            
+            function voice2(){
+                cpf.request('["tone_play", 6, 329, 150]');
+            }
+
+            function voice3(){
+                cpf.request('["tone_play", 6, 349, 150]');                
+            }
+
+            function voice4(){
+                cpf.request('["tone_play", 6, 392, 150]');
+            }  
+
+            function voice5(){
+                cpf.request('["tone_play", 6, 440, 150]');
+            }   
+
+            function voice6(){
+                cpf.request('["tone_play", 6, 493, 150]');
+            } 
+
+            function voice7(){
+                cpf.request('["tone_play", 6, 523, 150]');
+            }  
+
+            function music(){
+                
+                cpf.request('["tone_play", 6, 261, 150],["sleep", 150],["tone_play", 6, 261, 150],["sleep", 150],["tone_play", 6, 261, 150],["sleep", 150],["tone_play", 6, 329, 150],["sleep", 150],["tone_play", 6, 392, 150],["sleep", 150],["tone_play", 6, 392, 150],["sleep", 150],["tone_play", 6, 392, 150],["sleep",200],["tone_play", 6, 392,150] ,["sleep", 150],["tone_play", 6, 440, 150] ,["sleep", 150],["tone_play", 6,440, 150],["sleep", 150],["tone_play", 6,440, 150], ["sleep", 150],["tone_play", 6,523, 150] , ["sleep", 150],["tone_play", 6,392, 150] , ["sleep", 200],["tone_play", 6,349, 150] ,["sleep", 150],["tone_play", 6,349, 150] ,["sleep", 150],["tone_play", 6,349, 150] ,["sleep", 150],["tone_play", 6,440, 150] ,["sleep", 150],["tone_play", 6,329, 150] ,["sleep", 150],["tone_play", 6,329, 150] ,["sleep", 150],["tone_play", 6,329, 150] ,["sleep", 150],["tone_play", 6,329, 150] ,["sleep",200],["tone_play", 6,293, 150] ,["sleep", 150],["tone_play", 6,293, 150] ,["sleep", 150],["tone_play", 6,293, 150] ,["sleep", 150],["tone_play", 6,293, 150] ,["sleep", 150],["tone_play", 6,392, 150] ,["sleep", 200],["tone_play", 6,392, 150] ,["sleep", 150],["tone_play", 6,261, 150] ,["sleep", 150],["tone_play", 6,261, 150] ,["sleep", 150],["tone_play", 6,261, 150] ,["sleep", 150],["tone_play", 6,329, 150] ,["sleep", 150],["tone_play", 6,392, 150] ,["sleep", 150],["tone_play", 6,392, 150] ,["sleep", 150],["tone_play", 6,392, 150] ,["sleep", 200],["tone_play", 6,392, 150] ,["sleep", 150],["tone_play", 6,440, 150] ,["sleep", 150],["tone_play", 6,440, 150] ,["sleep", 150],["tone_play", 6,440, 150] ,["sleep", 150],["tone_play", 6,523, 150] ,["sleep", 150],["tone_play", 6,392, 150] ,["sleep", 200],["tone_play", 6,349, 150] ,["sleep", 150],["tone_play", 6,349, 150] ,["sleep", 150],["tone_play", 6,349, 150] ,["sleep", 150],["tone_play", 6,440, 150] ,["sleep", 150],["tone_play", 6,329, 150] ,["sleep", 100],["tone_play", 6,329, 150] ,["sleep", 100],["tone_play", 6,329, 150] ,["sleep", 100],["tone_play", 6,329, 150] ,["sleep", 10],["tone_play", 6,329, 150] ,["sleep", 200],["tone_play", 6,329, 150] ,["sleep", 150],["tone_play", 6,293, 150] ,["sleep", 150],["tone_play", 6,293, 150] ,["sleep", 150],["tone_play", 6,293, 150] ,["sleep", 150],["tone_play", 6,329, 150] ,["sleep", 150],["tone_play", 6,261, 150] ') ;
+
+            }        
+		
+		
+			// cpf setup
+			function setup() 
+			{
+				if (cpf)
+                cpf.setPinMode('["resetPin"],["setPinMode", "digital", 6, "TONE"] ');				
+			}
+
+
+
+        
+		</script>
 
 </body>
 </html>
