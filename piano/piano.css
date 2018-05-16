@@ -45,5 +45,6 @@ button{
 }
 
 button:hover{
-  box-shadow:5px 5px  rgba(117, 117, 117, 1) ;
+  box-shadow: h-shadow v-shadow blur spread color inset;
+  box-shadow: 0 0 15px #a1a1a1;
 }
