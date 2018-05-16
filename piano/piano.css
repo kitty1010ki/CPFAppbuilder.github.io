@@ -32,3 +32,18 @@ html{
   background-color: #ccc;
 
 }
+
+button{
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: #555555;
+}
+
+button:hover{
+  box-shadow:5px 5px  rgba(117, 117, 117, 1) ;
+}
