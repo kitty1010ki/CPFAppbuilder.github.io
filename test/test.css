@@ -38,6 +38,7 @@ button{
   border-radius: 50%;
   line-height: 10px;
   font-size: 1em;
+  font-family: 'Abril Fatface', cursive;
   background-color: #E71D30;
   color: #fff;
   box-shadow: 9px 5px 0 darkred;
