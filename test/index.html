@@ -40,24 +40,24 @@
   
         
         
-      // clickbtn.addEventListener('click',function(event)
-      // {
-          //  cpf.initSpeechRecognition("cmn-Hant-TW");
+      clickbtn.addEventListener('click',function(event)
+      {
+           cpf.initSpeechRecognition("cmn-Hant-TW");
           
-          //  cpf.SetSpeech("On","cmn-Hant-TW","請選擇歌曲",1,1);
-      //  });         
-      // function show_rock(){          
-      //   cpf.request('["grove_rgblcd_set_rgb", 0, 255, 0]');
-      //   cpf.request('["grove_rgblcd_clear"]');  //清空文字       
-      //   cpf.request('["grove_rgblcd_print", 0, 1, "孫燕姿-綠光"]'); //設定文字
-      //   cpf.SetSpeech("On","cmn-Hant-TW","播放綠光",1,1);
-      // }
-      // function show_rock(){
-      //   cpf.request('["grove_rgblcd_set_rgb", 0, 0, 0]');
-      //   cpf.request('["grove_rgblcd_clear"]');  //清空文字       
-      //   cpf.request('["grove_rgblcd_print", 0, 1, "田馥甄-小幸運"]'); //設定文字
-      //   cpf.SetSpeech("On","cmn-Hant-TW","播放小幸運",1,1);
-      // }
+           cpf.SetSpeech("On","cmn-Hant-TW","請選擇歌曲",1,1);
+       });         
+      function show_rock(){          
+        cpf.request('["grove_rgblcd_set_rgb", 0, 255, 0]');
+        cpf.request('["grove_rgblcd_clear"]');  //清空文字       
+        cpf.request('["grove_rgblcd_print", 0, 1, "孫燕姿-綠光"]'); //設定文字
+        cpf.SetSpeech("On","cmn-Hant-TW","播放綠光",1,1);
+      }
+      function show_rock(){
+        cpf.request('["grove_rgblcd_set_rgb", 0, 0, 0]');
+        cpf.request('["grove_rgblcd_clear"]');  //清空文字       
+        cpf.request('["grove_rgblcd_print", 0, 1, "田馥甄-小幸運"]'); //設定文字
+        cpf.SetSpeech("On","cmn-Hant-TW","播放小幸運",1,1);
+      }
 
 
        
@@ -65,8 +65,6 @@
       function setup(){
           if(cpf){
               cpf.setPinMode('["resetPin"],["grove_rgblcd_begin", 16, 2]');
-              cpf.initSpeechRecognition("cmn-Hant-TW");          
-              cpf.SetSpeech("On","cmn-Hant-TW","請選擇歌曲",1,1);
           }
       }
 
