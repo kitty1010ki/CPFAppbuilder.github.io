@@ -37,6 +37,9 @@
                 cpf.request('["grove_rgblcd_set_rgb", 255, 255, 255]');                  
                 cpf.request('["grove_rgblcd_print", 0, 1, "Lucky"]'); //設定文字
 
+                //song
+                cpf.request('["tone_play", 6, 392, 500],["sleep", 500], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6, 293, 500] ,["sleep", 500], ["tone_play", 6, 261, 800] ,["sleep", 450], ["tone_play", 6, 293, 500] ,["sleep", 500], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6, 392, 500] ,["sleep", 500],["tone_play", 6, 293, 500] ,["sleep", 500], ["tone_play", 6,329, 800] ,["sleep", 450], ["tone_play", 6, 392, 500] ,["sleep", 500], ["tone_play", 6, 293, 500] ,["sleep", 500], ["tone_play", 6,329, 800] ,["sleep", 450], ["tone_play", 6, 293, 500] ,["sleep", 500], ["tone_play", 6, 293, 500] ,["sleep", 500], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6, 349, 800] ,["sleep", 450], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6, 293, 500] ,["sleep", 500], ["tone_play", 6, 493, 500] ,["sleep", 500], ["tone_play", 6,524, 500] ,["sleep", 500], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6, 440, 500] ,["sleep", 500], ["tone_play", 6,524, 800] ,["sleep", 450], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6, 440, 500] ,["sleep", 500], ["tone_play", 6, 493, 800] ,["sleep", 450], ["tone_play", 6, 493, 500] ,["sleep", 500], ["tone_play", 6, 493, 500] ,["sleep", 500], ["tone_play", 6,660, 500] ,["sleep", 500], ["tone_play", 6, 784, 800] ,["sleep", 450], ["tone_play", 6,660, 500] ,["sleep", 500], ["tone_play", 6,524, 500] ,["sleep", 500], ["tone_play", 6, 493, 500] ,["sleep", 500], ["tone_play", 6, 440, 500] ,["sleep", 500], ["tone_play", 6, 698, 500] ,["sleep", 500], ["tone_play", 6, 698, 800] ,["sleep", 450], ["tone_play", 6, 784, 500] ,["sleep", 500], ["tone_play", 6, 698, 500] ,["sleep", 500], ["tone_play", 6,660, 500] ,["sleep", 500], ["tone_play", 6, 392, 500] ,["sleep", 500], ["tone_play", 6,660, 500] ,["sleep", 500], ["tone_play", 6,660, 800] ,["sleep", 450], ["tone_play", 6, 698, 500] ,["sleep", 500], ["tone_play", 6,660, 500] ,["sleep", 500], ["tone_play", 6,524, 500] ,["sleep", 500], ["tone_play", 6, 740, 500] ,["sleep", 500], ["tone_play", 6,588, 500] ,["sleep", 500], ["tone_play", 6,588, 800] ,["sleep", 450], ["tone_play", 6,588, 500] ,["sleep", 500], ["tone_play", 6,524, 500] ,["sleep", 500], ["tone_play", 6,660, 800] ,["sleep", 450], ["tone_play", 6,588, 700] ,["sleep", 480], ["tone_play", 6,660, 700] ,["sleep", 480], ["tone_play", 6,588, 700] ,["sleep", 480], ["tone_play", 6,524, 700] ,["sleep", 480]');
+
                 //divshow
                 if(x.style.display=="none")
                 {
@@ -51,6 +54,10 @@
                   cpf.request('["grove_rgblcd_clear"]');  //清空文字  
                   cpf.request('["grove_rgblcd_set_rgb", 0, 255, 0]');
                   cpf.request('["grove_rgblcd_print", 0, 1, "Green light"]'); //設定文字
+
+                  //song
+                  cpf.request('["tone_play", 6, 660, 500] ,["sleep", 500], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6,415, 500] ,["sleep", 600], ["tone_play", 6, 392, 350] ,["sleep", 200], ["tone_play", 6,329, 350] ,["sleep", 200], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6,329, 500] ,["sleep", 600], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6, 349, 350] ,["sleep", 200], ["tone_play", 6,329, 350] ,["sleep", 200], ["tone_play", 6, 261, 500] ,["sleep", 500], ["tone_play", 6, 261, 500] ,["sleep", 500], ["tone_play", 6, 293, 800] ,["sleep", 450], ["tone_play", 6, 261, 350] ,["sleep", 200], ["tone_play", 6, 293, 350] ,["sleep", 200], ["tone_play", 6, 261, 350] ,["sleep", 200], ["tone_play", 6, 293, 500] ,["sleep", 500], ["tone_play", 6, 261, 350] ,["sleep", 200], ["tone_play", 6, 293, 600] ,["sleep", 450], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6, 392, 500] ,["sleep", 500], ["tone_play", 6, 392, 350] ,["sleep", 200], ["tone_play", 6,329, 350] ,["sleep", 200], ["tone_play", 6,329, 500] ,["sleep", 500], ["tone_play", 6,329, 500] ,["sleep", 600], ["tone_play", 6,329, 350] ,["sleep", 200], ["tone_play", 6, 349, 350] ,["sleep", 200], ["tone_play", 6,329, 350] ,["sleep", 200], ["tone_play", 6, 261, 500] ,["sleep", 500], ["tone_play", 6, 261, 500] ,["sleep", 600], ["tone_play", 6, 293, 500] ,["sleep", 500], ["tone_play", 6, 293, 600] ,["sleep", 450], ["tone_play", 6, 293, 500] ,["sleep", 500], ["tone_play", 6, 261, 500] ,["sleep", 500], ["tone_play", 6, 261, 500] ,["sleep", 500] ');
+
                   if(y.style.display=="none")
                   {
                     y.style.display="block"; 
@@ -69,7 +76,7 @@
         
       function setup(){
           if(cpf){
-              cpf.setPinMode('["resetPin"],["grove_rgblcd_begin", 16, 2]');
+              cpf.setPinMode('["resetPin"],["grove_rgblcd_begin", 16, 2],["setPinMode", "digital", 6, "TONE"]');
           }
       }
 
