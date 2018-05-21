@@ -33,31 +33,35 @@
               if(Result.includes("小幸運"))
               {
                 cpf.SetSpeech("On","cmn-Hant-TW","播放小幸運",0.1,2);
-                cpf.request('["grove_rgblcd_set_rgb", 255, 255, 255]');
-                cpf.request('["grove_rgblcd_clear"]');  //清空文字       
+                cpf.request('["grove_rgblcd_clear"]');  //清空文字     
+                cpf.request('["grove_rgblcd_set_rgb", 255, 255, 255]');                  
                 cpf.request('["grove_rgblcd_print", 0, 1, "Lucky"]'); //設定文字
-                if(x.style.display=="none"){
+
+                //divshow
+                if(x.style.display=="none")
+                {
                   x.style.display="block";
-                  y.style.display="none";
-                }
-                    
+                  if(y.style.display=="block")
+                  y.style.display="none";                
+                }                    
               }
               else if(Result.includes("綠光")) 
               {
                   cpf.SetSpeech("On","cmn-Hant-TW","播放綠光",0.5,2);
+                  cpf.request('["grove_rgblcd_clear"]');  //清空文字  
                   cpf.request('["grove_rgblcd_set_rgb", 0, 255, 0]');
-                  cpf.request('["grove_rgblcd_clear"]');  //清空文字       
                   cpf.request('["grove_rgblcd_print", 0, 1, "Green light"]'); //設定文字
                   if(y.style.display=="none")
                   {
-                    y.style.display="block";
-                    x.style.display="none";
+                    y.style.display="block"; 
+                    if(x.style.display="block")
+                    x.style.display="none";                       
                   }
               }
               else{
                 cpf.SetSpeech("On","cmn-Hant-TW","查無此歌曲",0.5,2);
-                cpf.request('["grove_rgblcd_set_rgb", 0, 0, 0]');
                 cpf.request('["grove_rgblcd_clear"]');  //清空文字 
+                cpf.request('["grove_rgblcd_set_rgb", 0, 0, 0]');                
                 x.style.display="none";
                 y.style.display="none";
               }
