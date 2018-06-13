@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>喚響</title>
+  </head>
+  <body>
+
+    <form>
+        <p>請選擇區域</p>
+        <select id="location-list" onchange="changeLocation(this.selectedIndex)"></select>
+        <br>
+        <br>
+        <select id="sector-list"></select>
+        <p>時間:<p>
+        <p>NOX氮氧化物</p>
+        <p>SO2二氧化硫</p>
+        <p>OPAC不透光率</p>
+        <p>VEL排放流率</p>
+        <p>TEMP溫度</p>
+    </form>
+
+    <script type="text/javascript">
+        var locations=['林口','南部','大林','興達','協和','通霄','台中','大潭'];
+        var LocationSelect=document.getElementById("location-list");
+        var inner="";
+        for(var i=0;i<locations.length;i++){
+          inner=inner+'<option value=i>'+locations[i]+'</option>';
+        }
+        LocationSelect.innerHTML=inner;
+
+        var sectors=new Array();
+        //林口
+        sectors[0]=['1','2'];
+        //南部
+        sectors[1]=['1','2','3','4'];
+        //大林
+        sectors[2]=['1','2','5','6'];
+        //興達
+        sectors[3]=['1','2','3','4','5','6','7','8','9'];
+        //協和
+        sectors[4]=['1','2','3','4'];
+        //通霄
+        sectors[5]=['1','2','3','4','5','6'];
+        //台中
+        sectors[6]=['1','2','3','4','5','6','7','8','9','10'];
+        //大潭
+        sectors[7]=['1','2','3','4','5','6'];
+
+        function changeLocation(index){
+          var Sinner="";
+          for(var i=0;i<sectors[index].length;i++){
+            Sinner=Sinner+'<option value=i>'+sectors[index][i]+'</option>';
+          }
+          var sectorSelect=document.getElementById("sector-list");
+          sectorSelect.innerHTML=Sinner;
+        }
+        changeLocation(document.getElementById("location-list").selectedIndex);
+
+      </script>
+
+  </body>
+
+
+</html>
