@@ -5,9 +5,10 @@
     <title>喚響</title>
     <link rel="stylesheet" href="fi.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <script src="opendata.js" type="text/javascript" data='data'></script>
+
+    <!-- <script src="opendata.js" type="text/javascript" data='data'></script> -->
   </head>
-  <body onload="ShowTime()">
+  <body onload="ShowTime(),countUp()">
 
     <div class="container">
       <form>
@@ -15,20 +16,21 @@
         <select id="sector-list" class="selectLabel" ></select>
         <span id="showbox"></span>
         <br>
-        <span class="spandate">Saturday , June 17</span>
+        <span class="spandate" id="spandate"></span>
       </form>
     </div>
 
     <div class="content">
-        <div class="SO2">二氧化硫<p id="SO2"></p></div>
+        <div class="SO2"><h1>二氧化硫</h1><br><p id="SO2">100</p></div>
 
-        <div class="OPAC">不透光率<p id="OPAC"></p></div>
 
-        <div class="VEL">排放流率<p id="VEL"></p></div>
+        <div class="STU"><h1></h1>狀態<p id="STU">500</p></div>
 
-        <div class="NOX">氮氧化物<p id="NOX"></p></div>
+        <div class="CO"><h1>一氧化碳</h1><p id="CO">500</p></div>
 
-        <div class="TEMP">溫度<p id="TEMP"></p></div>
+        <div class="CO8H"><h1>一氧化碳_8H</h1><p id="CO8H">500</p></div>
+
+        <div class="AQI"><h1>AQI</h1><p id="AQI">500</p></div>
     </div>
 
   </body>
@@ -67,33 +69,42 @@
       sectorSelect.innerHTML=Sinner;
     }
     changeLocation(document.getElementById("location-list").selectedIndex);
-
-
     //show time
     function ShowTime(){
 　        var NowDate=new Date();
 　        var h=NowDate.getHours();
 　        var m=NowDate.getMinutes();
 　        var s=NowDate.getSeconds();　
+          var Mo=NowDate.getMonth()+1;//月份
+          var d=NowDate.getDate();//日期
+          var week;
+          switch (NowDate.getDay()){
+            case 1: week="Monday"; break;
+            case 2: week="Tuesday"; break;
+            case 3: week="Wednesday"; break;
+            case 4: week="Thursday"; break;
+            case 5: week="Friday"; break;
+            case 6: week="Saturday"; break;
+            default: week="Sunday";
+       }
           m = checkTime(m);
           s = checkTime(s);
 　        document.getElementById('showbox').innerHTML = h+':'+m+':'+s;
-　        setTimeout('ShowTime()',1000);
+          setTimeout('ShowTime()',1000);
+          document.getElementById('spandate').innerHTML= week+'&nbsp;&nbsp;'+Mo+' , '+d;
+　
     }
     function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
+    }
 
-  //animationnum
+    //countup
 
-  //test
-  window.onload=function() {
-        xmlFile="http://data.taipower.com.tw/opendata/apply/file/d004006/001.xml";
-        xmlData=loadXMLFile(xmlFile);
-        var SO2 = xmlData.getElementsByTagName("SO2二氧化硫").firstChild.nodeValue;
-        document.getElementById('SO2').innerHTML +='SO2 = '+SO2+'<br>';
-  }
-}
+			
+
+
+
   </script>
 
 
