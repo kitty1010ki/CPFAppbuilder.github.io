@@ -68,6 +68,7 @@ span{
 
 
 option{
+  color:#000;
   background-color: #fff;
   -webkit-transition: -webkit-transform 300ms ease;
 }
