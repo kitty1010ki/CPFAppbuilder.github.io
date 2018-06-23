@@ -3,7 +3,7 @@
   margin: 0;
   font-size: 12pt;
   font-family: "微軟正黑體";
-  background-color: #6D6F72;
+  background-color: #241356;
   color: #F2F2F2;
 }
 
@@ -13,28 +13,25 @@
 }
 
 .content{
-  margin: 5%;
+  margin: 3%;
   display:block;
   overflow: hidden;
   text-align: center;
-  /* align-items:center;
-  justify-content:center;
-  justify-content:space-around; */
 }
 
 h1{
   font-size: 2vw;
   font-weight: normal;
-  background-color: #F2F2F2;
+  background-color: rgba(23,12,56,0.0);
   color: #6D6F72;
 }
 
 p{
   display: block;
   overflow: hidden;
-  font-size: 2vw;
-  color: #6D6F72;
-  background-color: #F2F2F2;
+  font-size: 3.5vw;
+  color: #fff;
+  background-color: rgba(23,12,56,0.0);
 }
 
 /***showbox***/
@@ -58,18 +55,23 @@ span{
   margin: 0;
   height: 10%;
   width: 30%;
-  max-width: 200px;
-  font-size: 3.78vw;
-  padding: 10px;
-  background-color: #fff;
+  max-width: 210px;
+  font-size: 3.33vw;
+  padding: 13px;
+  background-color: #170c38;
   border: none;
-  color: #333;
+  color: #fff;
+  border-radius: 15%/30%;
+}
+
+select{	
+	
 }
 
 
 option{
-  color:#000;
-  background-color: #fff;
+  color: #fff;
+  background-color: #170c38;
   -webkit-transition: -webkit-transform 300ms ease;
 }
 
@@ -84,10 +86,10 @@ option:hover{
   align-items:center;
   justify-content:center;
   width: 18%;
-  max-height: 210px;
-  height: 200vh;
+  max-height: 120px;
+  height:200vh;
   float: left;
-  background-color: #F2F2F2;
+  background-color: rgba(23,12,56,0.70);
   margin-right: 3px;
 
 }
@@ -96,11 +98,12 @@ option:hover{
   display:flex;
   align-items:center;
   justify-content:center;
-  width: 20%;
-  height: 210px;
+  width: 18%;
+  max-height: 120px;
+  height:200vh;
   float: left;
   font-size: 1.7vw;
-  background-color: #F2F2F2;
+  background-color: rgba(23,12,56,0.70);
   margin-right: 3px;
 
 
@@ -110,11 +113,12 @@ option:hover{
   display:flex;
   align-items:center;
   justify-content:center;
-  width: 20%;
-  height: 210px;
+  width: 18%;
+  max-height: 120px;
+  height:200vh;
   float: left;
   font-size: 1.7vw;
-  background-color: #F2F2F2;
+  background-color: rgba(23,12,56,0.70);
   margin-right: 3px;
 
 
@@ -124,11 +128,12 @@ option:hover{
   display:flex;
   align-items:center;
   justify-content:center;
-  width: 20%;
-  height: 210px;
+  width: 18%;
+  max-height: 120px;
+  height:200vh;
   float: left;
   font-size: 1.7vw;
-  background-color: #F2F2F2;
+  background-color: rgba(23,12,56,0.70);
   margin-right: 3px;
 
 
@@ -138,15 +143,10 @@ option:hover{
   display:flex;
   align-items:center;
   justify-content:center;
-  width: 20%;
-  height: 210px;
+  width: 18%;
+  max-height: 120px;
+  height:200vh;
   float: left;
   font-size: 1.7vw;
-  background-color: #F2F2F2;
+  background-color: rgba(23,12,56,0.70);
 }
-
-
-
-
-
------------------
