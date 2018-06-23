@@ -86,7 +86,7 @@ option:hover{
   align-items:center;
   justify-content:center;
   width: 18%;
-  max-height: 120px;
+  max-height: 80px;
   height:200vh;
   float: left;
   background-color: rgba(23,12,56,0.70);
@@ -99,7 +99,7 @@ option:hover{
   align-items:center;
   justify-content:center;
   width: 18%;
-  max-height: 120px;
+  max-height: 80px;
   height:200vh;
   float: left;
   font-size: 1.7vw;
@@ -114,7 +114,7 @@ option:hover{
   align-items:center;
   justify-content:center;
   width: 18%;
-  max-height: 120px;
+  max-height: 80px;
   height:200vh;
   float: left;
   font-size: 1.7vw;
@@ -129,7 +129,7 @@ option:hover{
   align-items:center;
   justify-content:center;
   width: 18%;
-  max-height: 120px;
+  max-height: 80px;
   height:200vh;
   float: left;
   font-size: 1.7vw;
@@ -144,9 +144,22 @@ option:hover{
   align-items:center;
   justify-content:center;
   width: 18%;
-  max-height: 120px;
+  max-height: 80px;
   height:200vh;
   float: left;
   font-size: 1.7vw;
+  background-color: rgba(23,12,56,0.70);
+}
+
+.d{
+  display:flex;  
+  align-items:center;
+  justify-content:center;
+  width: 18%;
+  max-height: 38px;
+  height:30vh;
+  float: left;
+  font-size: 1.7vw;
+  margin-right: 3px;
   background-color: rgba(23,12,56,0.70);
 }
