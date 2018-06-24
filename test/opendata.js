@@ -106,7 +106,7 @@
                call();
               }
             changeLocation(document.getElementById("location-list").selectedIndex);
-            
+            0
             
             }
             
@@ -116,7 +116,7 @@
                     url: "http://opendata2.epa.gov.tw/AQI.xml",
                     dataType: "xml",
                     error: function (result) {
-                      console.log('oh no');
+                      console.log('nonono');
                     },
                     success: function (result) {
                       var SiteName, County, SO2, CO_8hr, AQI, NO, Status;
@@ -148,3 +148,65 @@
         function getNodeValue(e, key, i) {
             return e.getElementsByTagName(key)[i].firstChild != null ? e.getElementsByTagName(key)[i].firstChild.nodeValue : '無資料';
           }
+
+         
+          setup();
+              cpf.initSpeechRecognition("cmn-Hant-TW");  
+              switch (Status){
+                case "良好":
+                  cpf.SetSpeech("On","cmn-Hant-TW","狀態良好",0.1,2);
+                  cpf.request('["grove_rgblcd_clear"]');  //清空文字     
+                  cpf.request('["grove_rgblcd_set_rgb", 0, 255, 0]');                  
+                  cpf.request('["grove_rgblcd_print", 0, 1, "狀態良好"]'); //設定文字
+                  break;
+                case "普通":
+                  cpf.request('["digitalWrite", 2 , 1]');
+                  cpf.SetSpeech("On","cmn-Hant-TW","狀態普通",0.2,2);
+                  cpf.request('["tone_play", 6, 261, 300],["sleep", 300]');
+                  cpf.request('["grove_rgblcd_clear"]');  //清空文字     
+                  cpf.request('["grove_rgblcd_set_rgb", 255, 255, 0]');                  
+                  cpf.request('["grove_rgblcd_print", 0, 1, "狀態普通"]'); //設定文字
+                  break;
+                case "對敏感族群不健康":
+                  cpf.request('["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1]');
+                  cpf.SetSpeech("On","cmn-Hant-TW","對敏感族群不健康",0.3,2);
+                  cpf.request('["tone_play", 6, 261, 500],["sleep", 300],["tone_play", 6, 261, 500],["sleep", 300],["tone_play", 6, 261, 500],["sleep", 300]');
+                  cpf.request('["grove_rgblcd_clear"]');  //清空文字     
+                  cpf.request('["grove_rgblcd_set_rgb", 255, 116, 21]');                  
+                  cpf.request('["grove_rgblcd_print", 0, 1, "對敏感族群不健康"]'); //設定文字
+                  break;
+                case "對所有族群不健康":
+                  cpf.request('["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1]');
+                  cpf.SetSpeech("On","cmn-Hant-TW","對所有族群不健康",0.4,2);
+                  cpf.request('["tone_play", 6, 261, 200],["sleep", 300],["tone_play", 6, 261, 200],["sleep", 300],["tone_play", 6, 261, 200],["sleep", 300]');
+                  cpf.request('["grove_rgblcd_clear"]');  //清空文字     
+                  cpf.request('["grove_rgblcd_set_rgb",203, 0, 0]');                  
+                  cpf.request('["grove_rgblcd_print", 0, 1, "對所有族群不健康"]'); //設定文字
+                  break;
+                case "非常不健康":
+                  cpf.request('["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1]');
+                  cpf.SetSpeech("On","cmn-Hant-TW","非常不健康",0.5,2);
+                  cpf.request('["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300]');
+                  cpf.request('["grove_rgblcd_clear"]');  //清空文字     
+                  cpf.request('["grove_rgblcd_set_rgb", 69, 0, 68]');                  
+                  cpf.request('["grove_rgblcd_print", 0, 1, "非常不健康"]'); //設定文字
+                  break;
+                default:
+                cpf.request('["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1]');
+                  cpf.SetSpeech("On","cmn-Hant-TW","危害",0.6,2);
+                  cpf.request('["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300]');
+                  cpf.request('["grove_rgblcd_clear"]');  //清空文字     
+                  cpf.request('["grove_rgblcd_set_rgb", 7, 47, 122]');                  
+                  cpf.request('["grove_rgblcd_print", 0, 1, "狀態危害"]'); //設定文字
+                  break;
+
+
+              }
+      
+            
+          function setup(){
+              if(cpf){
+                  cpf.setPinMode('["resetPin"],["grove_rgblcd_begin", 16, 2],["setPinMode", "digital", 6, "TONE"],["setPinMode", "digital", 2, "OUTPUT"]');
+              }
+          }
+
