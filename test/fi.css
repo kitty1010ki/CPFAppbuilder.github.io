@@ -1,0 +1,161 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-size: 12pt;
+  font-family: "微軟正黑體";
+  background-color: #241356;
+  color: #F2F2F2;
+}
+
+.container{
+  margin: 5%;
+  display: block;
+}
+
+.content{
+  margin: 3%;
+  display:block;
+  overflow: hidden;
+  text-align: center;
+}
+
+h1{
+  font-size: 2vw;
+  font-weight: normal;
+  background-color: rgba(23,12,56,0.0);
+  color: #fff;
+}
+
+p{
+  display: block;
+  overflow: hidden;
+  font-size: 3.5vw;
+  color: #fff;
+  background-color: rgba(23,12,56,0.0);
+}
+
+/***showbox***/
+span{
+  display: block;
+  float: right;
+  font-size: 4.5vw;
+  font-size: 4.5vmax;
+  font-family: 'PT Sans', sans-serif;
+}
+/****date***/
+.spandate{
+  display: block;
+  float: right;
+  font-size: 1.5vw;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.selectLabel{
+  vertical-align:top;  /**baseline**/
+  margin: 0;
+  height: 10%;
+  width: 30%;
+  max-width: 210px;
+  font-size: 3.33vw;
+  padding: 13px;
+  background-color: #170c38;
+  border: none;
+  color: #fff;
+  border-radius: 15%/30%;
+}
+
+option{
+  color: #fff;
+  background-color: #170c38;
+  transition: -webkit-transform 300ms ease;
+}
+
+option:hover{
+  background-color: #333;
+  color: #fff;
+}
+
+/****six div ****/
+.SO2{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 18%;
+  max-height: 80px;
+  height:200vh;
+  float: left;
+  font-size: 1.7vw;
+  background-color: rgba(23,12,56,0.70);
+  margin-right: 5px;
+
+}
+
+.STU{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 18%;
+  max-height: 80px;
+  height:200vh;
+  float: left;
+  font-size: 1.7vw;
+  background-color: rgba(23,12,56,0.70);
+  margin-right: 5px;
+
+
+}
+
+.NO{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 18%;
+  max-height: 80px;
+  height:200vh;
+  float: left;
+  font-size: 1.7vw;
+  background-color: rgba(23,12,56,0.70);
+  margin-right: 5px;
+
+
+}
+
+.CO8H{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 18%;
+  max-height: 80px;
+  height:200vh;
+  float: left;
+  font-size: 1.7vw;
+  background-color: rgba(23,12,56,0.70);
+  margin-right: 5px;
+
+
+}
+
+.AQI{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 18%;
+  max-height: 80px;
+  height:200vh;
+  float: left;
+  font-size: 1.7vw;
+  background-color: rgba(23,12,56,0.70);
+}
+
+.sweetheart{
+  display:flex;  
+  align-items:center;
+  justify-content:center;
+  width: 18%;
+  max-height: 38px;
+  height:30vh;
+  float: left;
+  font-size: 1.7vw;
+  margin-right: 5px;
+  background-color: rgba(23,12,56,0.70);
+}
