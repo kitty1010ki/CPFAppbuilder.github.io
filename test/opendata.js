@@ -4,6 +4,7 @@
     var County_s ='';
     var County_index;
     var SiteName_index;
+    setup();
     function ShowTime(){
         　        var NowDate=new Date();
         　        var h=NowDate.getHours();
@@ -28,6 +29,7 @@
                   document.getElementById('spandate').innerHTML= week+'&nbsp;&nbsp;'+Mo+' , '+d;
         　
             }
+            
             function checkTime(i) {
             if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
             return i;
@@ -139,19 +141,7 @@
                     document.getElementById('NO').innerHTML=NO;
                     document.getElementById('STU').innerHTML=Status;
                     
-                  }
-                    }  
-                    },
-                  });
-            }
-           
-        function getNodeValue(e, key, i) {
-            return e.getElementsByTagName(key)[i].firstChild != null ? e.getElementsByTagName(key)[i].firstChild.nodeValue : '無資料';
-          }
-
-         
-          setup();
-              cpf.initSpeechRecognition("cmn-Hant-TW");  
+                    cpf.initSpeechRecognition("cmn-Hant-TW");  
               switch (Status){
                 case "良好":
                   cpf.SetSpeech("On","cmn-Hant-TW","狀態良好",0.1,2);
@@ -202,6 +192,21 @@
 
 
               }
+
+
+                  }
+                    }  
+                    },
+                  });
+            }
+           
+        function getNodeValue(e, key, i) {
+            return e.getElementsByTagName(key)[i].firstChild != null ? e.getElementsByTagName(key)[i].firstChild.nodeValue : '無資料';
+          }
+
+         
+          
+              
       
             
           function setup(){
