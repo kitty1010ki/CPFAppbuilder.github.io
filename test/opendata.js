@@ -141,7 +141,7 @@
                     document.getElementById('NO').innerHTML=NO;
                     document.getElementById('STU').innerHTML=Status;
                     
-                    cpf.initSpeechRecognition("cmn-Hant-TW");  
+                      
               switch (Status){
                 case "良好":
                   cpf.SetSpeech("On","cmn-Hant-TW","狀態良好",0.1,2);
