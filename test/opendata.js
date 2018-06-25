@@ -153,13 +153,14 @@
                   cpf.request('["grove_rgblcd_print", 0, 1, "Good"]'); //設定文字
                   break;
                 case "普通":
-                  cpf.request('["tone_play", 5, 261, 300],["sleep", 300]');
+                  cpf.request('["tone_play", 5, 261, 300]');
                   cpf.request('["digitalWrite", 6 , 1]');
                   cpf.SetSpeech("On","cmn-Hant-TW",SiteName+"狀態普通",0.2,2);
                   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
                   cpf.request('["grove_rgblcd_set_rgb", 255, 255, 0]');                  
                   cpf.request('["grove_rgblcd_print", 0, 1, "Normal"]'); //設定文字
                   cpf.request('["digitalWrite", 6 , 0]');
+                      console.log("普通");
                   break;
                 // case "對敏感族群不健康":
                 //   cpf.request('["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1]');
@@ -192,6 +193,7 @@
                   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
                   cpf.request('["grove_rgblcd_set_rgb", 7, 47, 122]');                  
                   cpf.request('["grove_rgblcd_print", 0, 1, "Danger"]'); //設定文字
+                      console.log("default");
                   break;
 
               }
