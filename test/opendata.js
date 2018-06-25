@@ -35,7 +35,7 @@
             return i;
             }
             if(document.getElementById("location-list")){
-            var locations=['基隆市','雲林縣','屏東縣'];
+            var locations=['雲林縣','基隆市','屏東縣'];
             var LocationSelect=document.getElementById("location-list");
             var inner="";
             for(var i=0;i<locations.length;i++){
@@ -43,10 +43,10 @@
             }
             LocationSelect.innerHTML=inner;  
             var sectors=new Array();
-            //基隆市
-            sectors[0]=['基隆'];
             //雲林縣
-            sectors[1]=['斗六','崙背','臺西','麥寮'];
+            sectors[0]=['斗六','崙背','臺西','麥寮'];
+            //基隆市
+            sectors[1]=['基隆'];
             //屏東縣
             sectors[2]=['屏東','潮州','恆春'];
             //桃園市
