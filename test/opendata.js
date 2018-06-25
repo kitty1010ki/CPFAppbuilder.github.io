@@ -111,7 +111,14 @@
             
             
             }
+
+            //test
+            cpf.request('["grove_rgblcd_set_rgb", 0, 255, 0]');                  
+            cpf.request('["grove_rgblcd_print", 0, 1, "Good"]'); //設定文字
             
+
+
+
             function call(){
                 $.ajax({
                     type: "GET",
