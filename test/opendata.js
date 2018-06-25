@@ -35,7 +35,7 @@
             return i;
             }
             if(document.getElementById("location-list")){
-            var locations=['基隆市','新竹市','臺北市'];
+            var locations=['基隆市','雲林縣','屏東縣'];
             var LocationSelect=document.getElementById("location-list");
             var inner="";
             for(var i=0;i<locations.length;i++){
@@ -45,10 +45,10 @@
             var sectors=new Array();
             //基隆市
             sectors[0]=['基隆'];
-            //新竹市
-            sectors[1]=['新竹'];
-            //臺北市
-            sectors[2]=['士林','中山','萬華','古亭','松山','大同','陽明'];
+            //雲林縣
+            sectors[8]=['斗六','崙背','臺西','麥寮'];
+            //屏東縣
+            sectors[14]=['屏東','潮州','恆春'];
             //桃園市
             // sectors[3]=['桃園','大園','觀音','平鎮','龍潭','中壢'];
             // //新竹縣
