@@ -93,11 +93,12 @@
                 Sinner=Sinner+'<option value=i>'+sectors[index][i]+'</option>';
               }
               var sectorSelect=document.getElementById("sector-list");
-              sectorSelect.innerHTML=Sinner;
-              County_index=index;
+            sectorSelect.innerHTML=Sinner;
+              County_index =index;
               SiteName_index=0;
               County_s=locations[County_index];
               SiteName_s=sectors[County_index][SiteName_index];
+              console.log(County_index);
               call();
               
             }
