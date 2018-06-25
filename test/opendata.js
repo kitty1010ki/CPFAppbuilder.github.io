@@ -150,8 +150,8 @@
                   cpf.request('["grove_rgblcd_print", 0, 1, "Good"]'); //設定文字
                   break;
                 case "普通":
-                  cpf.request('["tone_play", 6, 261, 300],["sleep", 300]');
-                  cpf.request('["digitalWrite", 2 , 1]');
+                  cpf.request('["tone_play", 5, 261, 300],["sleep", 300]');
+                  cpf.request('["digitalWrite", 6 , 1]');
                   cpf.SetSpeech("On","cmn-Hant-TW",SiteName+"狀態普通",0.2,2);
                   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
                   cpf.request('["grove_rgblcd_set_rgb", 255, 255, 0]');                  
@@ -182,9 +182,9 @@
                 //   cpf.request('["grove_rgblcd_print", 0, 1, "非常不健康"]'); //設定文字
                 //   break;
                 default:
-                cpf.request('["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1]');
+                cpf.request('["digitalWrite", 6 , 1],["digitalWrite", 6 , 0],["digitalWrite",6 , 1],["digitalWrite",6 , 0],["digitalWrite", 6 , 1],["digitalWrite", 6 , 0],["digitalWrite", 6 , 1],["digitalWrite", 6 , 0],["digitalWrite", 6 , 1]');
                   cpf.SetSpeech("On","cmn-Hant-TW", SiteName+"狀態危害",0.6,2);
-                  cpf.request('["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300]');
+                  cpf.request('["tone_play", 5, 523, 200],["sleep", 300],["tone_play",5, 523, 200],["sleep", 300],["tone_play",5, 523, 200],["sleep", 300],["tone_play", 5, 523, 200],["sleep", 300],["tone_play",5, 523, 200],["sleep", 300],["tone_play", 5, 523, 200],["sleep", 300]');
                   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
                   cpf.request('["grove_rgblcd_set_rgb", 7, 47, 122]');                  
                   cpf.request('["grove_rgblcd_print", 0, 1, "Danger"]'); //設定文字
