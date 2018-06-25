@@ -108,7 +108,7 @@
                call();
               }
             changeLocation(document.getElementById("location-list").selectedIndex);
-            0
+            
             
             }
             
