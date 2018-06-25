@@ -150,9 +150,9 @@
                   cpf.request('["grove_rgblcd_print", 0, 1, "Good"]'); //設定文字
                   break;
                 case "普通":
+                  cpf.request('["tone_play", 6, 261, 300],["sleep", 300]');
                   cpf.request('["digitalWrite", 2 , 1]');
                   cpf.SetSpeech("On","cmn-Hant-TW",SiteName+"狀態普通",0.2,2);
-                  cpf.request('["tone_play", 6, 261, 300],["sleep", 300]');
                   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
                   cpf.request('["grove_rgblcd_set_rgb", 255, 255, 0]');                  
                   cpf.request('["grove_rgblcd_print", 0, 1, "Normal"]'); //設定文字
@@ -190,9 +190,7 @@
                   cpf.request('["grove_rgblcd_print", 0, 1, "Danger"]'); //設定文字
                   break;
 
- 
               }
-
 
                   }
                     }  
@@ -203,12 +201,7 @@
         function getNodeValue(e, key, i) {
             return e.getElementsByTagName(key)[i].firstChild != null ? e.getElementsByTagName(key)[i].firstChild.nodeValue : '無資料';
           }
-
-         
-          
-              
-      
-            
+           
           function setup(){
               if(cpf){
                   cpf.setPinMode('["resetPin"],["grove_rgblcd_begin", 16, 2],["setPinMode", "digital", 6, "TONE"],["setPinMode", "digital", 2, "OUTPUT"]');
