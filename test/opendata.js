@@ -152,6 +152,7 @@
               switch (Status){
                 case "良好":
                   cpf.SetSpeech("On","cmn-Hant-TW",SiteName+"狀態良好",0.1,2);
+                  cpf.request('["digitalWrite", 6 , 0]');
                   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
                   cpf.request('["grove_rgblcd_set_rgb", 0, 255, 0]');                  
                   cpf.request('["grove_rgblcd_print", 0, 1, "Good"]'); //設定文字
