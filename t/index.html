@@ -4,6 +4,6 @@ function setup(){
                   cpf.setPinMode('["resetPin"],["grove_rgblcd_begin", 16, 2],["setPinMode", "digital", 5, "TONE"],["setPinMode", "digital", 6, "OUTPUT"]');
               }
           }
- cpf.request('["tone_play", 5, 261, 300]');
+ cpf.request('["tone_play", 5, 261, 300],["sleep",300],["tone_play", 5, 261, 300]');
                   
 </script>
