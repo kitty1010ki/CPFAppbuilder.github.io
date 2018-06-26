@@ -64,6 +64,11 @@ span{
   border-radius: 15%/30%;
 }
 
+select{
+
+}
+
+
 option{
   color: #fff;
   background-color: #170c38;
@@ -146,8 +151,8 @@ option:hover{
   background-color: rgba(23,12,56,0.70);
 }
 
-.sweetheart{
-  display:flex;  
+.sweet{
+  display:flex;
   align-items:center;
   justify-content:center;
   width: 18%;

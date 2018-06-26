@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 	<script src="https://webduino.io/components/webduino-js/dist/webduino-all.min.js"></script>
 	<script src="https://blockly.webduino.io/webduino-blockly.js"></script>
-	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>	
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
   </head>
-  
+
   <body onload="ShowTime()">
     <div class="container">
-        <form>
+      <form>
         <select id="location-list"  class="selectLabel" onclick="changeLocation(this.selectedIndex)"></select>
         <select id="sector-list" class="selectLabel" onclick="changeSiteName(this.selectedIndex)"></select>
         <span id="showbox"></span>
@@ -26,12 +26,12 @@
     <div class="NO"><p id="NO">500</p></div>
     <div class="CO8H"><p id="CO8H">500</p></div>
     <div class="AQI"><p id="AQI">500</p></div>
-		
-		<div class="sweetheart"><h1>二氧化硫</h1></div>
-		<div class="sweetheart"><h1>狀態</h1></div>
-		<div class="sweetheart"><h1>一氧化碳</h1></div>
-		<div class="sweetheart"><h1>一氧化碳_8H</h1></div>
-		<div class="sweetheart"><h1>AQI</h1></div>
+
+		<div class="sweet"><h1>二氧化硫</h1></div>
+		<div class="sweet"><h1>狀態</h1></div>
+		<div class="sweet"><h1>一氧化碳</h1></div>
+		<div class="sweet"><h1>一氧化碳_8H</h1></div>
+		<div class="sweet"><h1>AQI</h1></div>
     </div>
 	<script src="opendata.js"></script>
   </body>
