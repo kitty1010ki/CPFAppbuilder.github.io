@@ -7,16 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-  <p>change</p>
+  <p id="y">change</p>
+    <p>ch</p>
    <script>
+       var tt=document.getElementById("y");
 function setup(){
               if(cpf){
                   cpf.setPinMode('["resetPin"],["grove_rgblcd_begin", 16, 2],["setPinMode", "digital", 5, "TONE"],["setPinMode", "digital", 6, "OUTPUT"]');
               }
           }
  
-  switch ("普通"){
-                case "良好":
+  switch ("y"){
+                case "change":
                   cpf.SetSpeech("On","cmn-Hant-TW",SiteName+"狀態良好",0.1,2);
                   cpf.request('["digitalWrite", 6 , 0]');
                   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
