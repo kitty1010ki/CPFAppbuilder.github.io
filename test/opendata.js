@@ -49,44 +49,7 @@
             sectors[1]=['基隆'];
             //屏東縣
             sectors[2]=['屏東','潮州','恆春'];
-            //桃園市
-            // sectors[3]=['桃園','大園','觀音','平鎮','龍潭','中壢'];
-            // //新竹縣
-            // sectors[4]=['湖口','竹東'];
-            // //苗栗縣
-            // sectors[5]=['頭份','苗栗','三義'];
-            // //臺中市
-            // sectors[6]=['豐原','沙鹿','大里','忠明','西屯'];
-            // //彰化縣
-            // sectors[7]=['彰化','線西','二林'];
-            // //雲林縣
-            // sectors[8]=['斗六','崙背','臺西','麥寮'];
-            // //南投縣
-            // sectors[9]=['南投','竹山','埔里'];
-            // //嘉義縣
-            // sectors[10]=['新港','朴子'];
-            // //嘉義市
-            // sectors[11]=['嘉義'];
-            // //臺南市
-            // sectors[12]=['新營','善化','安南','臺南'];
-            // //高雄市
-            // sectors[13]=['美濃','橋頭','仁武','鳳山','大寮','林園','楠梓','左營','前金','前鎮','小港','復興'];
-            // //屏東縣
-            // sectors[14]=['屏東','潮州','恆春'];
-            // //臺東縣
-            // sectors[15]=['臺東','關山'];
-            // //花蓮縣
-            // sectors[16]=['花蓮'];	
-            // //宜蘭縣
-            // sectors[17]=['宜蘭','東山'];
-            // //新北市
-            // sectors[18]=['汐止','萬里','新店','土城','板橋','新莊','菜寮','林口','淡水','三重','永和','富貴角'];
-            // //連江縣
-            // sectors[19]=['馬祖'];
-            // //金門縣
-            // sectors[20]=['金門'];
-            // //澎湖縣
-            // sectors[21]=['馬公'];
+         
             function changeLocation(index){
               var Sinner="";
               for(var i=0;i<sectors[index].length;i++){
@@ -162,30 +125,6 @@
                   cpf.request('["digitalWrite", 6 , 1]');
                       console.log("普通");
                   break;
-                // case "對敏感族群不健康":
-                //   cpf.request('["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1]');
-                //   cpf.SetSpeech("On","cmn-Hant-TW","對敏感族群不健康",0.3,2);
-                //   cpf.request('["tone_play", 6, 261, 500],["sleep", 300],["tone_play", 6, 261, 500],["sleep", 300],["tone_play", 6, 261, 500],["sleep", 300]');
-                //   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
-                //   cpf.request('["grove_rgblcd_set_rgb", 255, 116, 21]');                  
-                //   cpf.request('["grove_rgblcd_print", 0, 1, "對敏感族群不健康"]'); //設定文字
-                //   break;
-                // case "對所有族群不健康":
-                //   cpf.request('["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1]');
-                //   cpf.SetSpeech("On","cmn-Hant-TW","對所有族群不健康",0.4,2);
-                //   cpf.request('["tone_play", 6, 261, 200],["sleep", 300],["tone_play", 6, 261, 200],["sleep", 300],["tone_play", 6, 261, 200],["sleep", 300]');
-                //   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
-                //   cpf.request('["grove_rgblcd_set_rgb",203, 0, 0]');                  
-                //   cpf.request('["grove_rgblcd_print", 0, 1, "對所有族群不健康"]'); //設定文字
-                //   break;
-                // case "非常不健康":
-                //   cpf.request('["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1],["digitalWrite", 2 , 0],["digitalWrite", 2 , 1]');
-                //   cpf.SetSpeech("On","cmn-Hant-TW","非常不健康",0.5,2);
-                //   cpf.request('["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300],["tone_play", 6, 523, 200],["sleep", 300]');
-                //   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
-                //   cpf.request('["grove_rgblcd_set_rgb", 69, 0, 68]');                  
-                //   cpf.request('["grove_rgblcd_print", 0, 1, "非常不健康"]'); //設定文字
-                //   break;
                 default:
                 cpf.request('["digitalWrite", 6 , 1],["digitalWrite", 6 , 0],["digitalWrite",6 , 1],["digitalWrite",6 , 0],["digitalWrite", 6 , 1],["digitalWrite", 6 , 0],["digitalWrite", 6 , 1],["digitalWrite", 6 , 0],["digitalWrite", 6 , 1]');
                   cpf.SetSpeech("On","cmn-Hant-TW", SiteName+"狀態危害",0.6,2);
