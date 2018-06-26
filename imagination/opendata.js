@@ -81,51 +81,68 @@
     sectors[20]=['金門'];
 	//澎湖縣
     sectors[21]=['馬公'];
-    function changeLocation(index){
-      var Sinner="";
-      for(var i=0;i<sectors[index].length;i++){
-        Sinner=Sinner+'<option value=i>'+sectors[index][i]+'</option>';
-      }
-      var sectorSelect=document.getElementById("sector-list");
-      sectorSelect.innerHTML=Sinner;
-    }
-    changeLocation(document.getElementById("location-list").selectedIndex);
-	document.getElementById("rest").innerHTML = document.getElementById("LocationSelect").value
-	}
-	//抓取opendata
-	// var SO2 =document.getElementById("SO2");
-	// var STU =document.getElementById("STU");
-	// var CO =document.getElementById("CO");
-	// var CO8H =document.getElementById("CO8H");
-	// var AQI =document.getElementById("AQI");
-	// $(document).ready(function () {
-	// $.ajax({
-    // type: "GET",
-    // url: "http://opendata2.epa.gov.tw/AQI.xml",
-    // dataType: "xml",
-    // error: function (result) {
-      // console.log('oh no');
-    // },
-    // success: function (result) {
-      // var SiteName, County, SO2, CO_8hr, AQI, NO, Status;
-      // var key = true;
-      // var SiteName_s = '';
-      // var County_s = '';
-      
-      // for (var i = 0; i < result.getElementsByTagName('Data').length; i++) {
-        // SiteName = getNodeValue(result, "SiteName", i);
-        // County = getNodeValue(result, "County", i);
-        // SO2 = getNodeValue(result, "SO2", i);
-        // CO_8hr = getNodeValue(result, "CO_8hr", i);
-        // AQI = getNodeValue(result, "AQI", i);
-        // NO = getNodeValue(result, "NO", i);
-        // Status = getNodeValue(result, "Status", i);
-		// SO2.innerHTML=SO2;
-        // console.log(County + ' ' + SiteName + ' 二氧化硫:' + SO2 + ' 一氧化碳(8hr):' + CO_8hr + ' AQI:' + AQI + ' 空氣品質:' + Status);
-      // }  
-    // },
-  // });
-// });
-    
+     function changeLocation(index){
+              var Sinner="";
+              for(var i=0;i<sectors[index].length;i++){
+                Sinner=Sinner+'<option value=i>'+sectors[index][i]+'</option>';
+              }
+              var sectorSelect=document.getElementById("sector-list");
+              sectorSelect.innerHTML=Sinner;
+              County_index=index;
+              SiteName_index=0;
+              County_s=locations[County_index];
+              SiteName_s=sectors[County_index][SiteName_index];
+              call();
+
+            }
+
+            function changeSiteName(index){
+               SiteName_index=index;
+               SiteName_s=sectors[County_index][SiteName_index];
+               call();
+              }
+            changeLocation(document.getElementById("location-list").selectedIndex);
+
+
+            }
+
+            function call(){
+                $.ajax({
+                    type: "GET",
+                    url: "http://opendata2.epa.gov.tw/AQI.xml",
+                    dataType: "xml",
+                    error: function (result) {
+                      console.log('oh no');
+                    },
+                    success: function (result) {
+                      var SiteName, County, SO2, CO_8hr, AQI, NO, Status;
+                      var key = true;
+
+                      for (var i = 0; i < result.getElementsByTagName('Data').length; i++) {
+                        SiteName = getNodeValue(result, "SiteName", i);
+                        County = getNodeValue(result, "County", i);
+                        SO2 = getNodeValue(result, "SO2", i);
+                        CO_8hr = getNodeValue(result, "CO_8hr", i);
+                        AQI = getNodeValue(result, "AQI", i);
+                        NO = getNodeValue(result, "NO", i);
+                        Status = getNodeValue(result, "Status", i);
+
+                        if (County==County_s && SiteName_s==SiteName)
+                  {
+                    document.getElementById('SO2').innerHTML=SO2;
+                    document.getElementById('CO8H').innerHTML=CO_8hr;
+                    document.getElementById('AQI').innerHTML=AQI;
+                    document.getElementById('NO').innerHTML=NO;
+                    document.getElementById('STU').innerHTML=Status;
+
+                  }
+                    }
+                    },
+                  });
+            }
+
+        function getNodeValue(e, key, i) {
+            return e.getElementsByTagName(key)[i].firstChild != null ? e.getElementsByTagName(key)[i].firstChild.nodeValue : '無資料';
+          } 
 	
 	
