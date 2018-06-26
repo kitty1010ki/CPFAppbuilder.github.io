@@ -4,7 +4,7 @@
     var County_s ='';
     var County_index;
     var SiteName_index;
-    setup();
+    
     function ShowTime(){
         　        var NowDate=new Date();
         　        var h=NowDate.getHours();
@@ -143,7 +143,7 @@
                     document.getElementById('NO').innerHTML=NO;
                     document.getElementById('STU').innerHTML=Status;
                     
-                      
+              setup();        
               switch (Status){
                 case "良好":
                   cpf.SetSpeech("On","cmn-Hant-TW",SiteName+"狀態良好",0.1,2);
