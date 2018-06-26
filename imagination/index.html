@@ -12,21 +12,20 @@
   
   <body onload="ShowTime()">
     <div class="container">
-      <form>
-        <select id="location-list"  class="selectLabel" onchange="changeLocation(this.selectedIndex)"></select>
-        <select id="sector-list" class="selectLabel" ></select>
+        <form>
+        <select id="location-list"  class="selectLabel" onclick="changeLocation(this.selectedIndex)"></select>
+        <select id="sector-list" class="selectLabel" onclick="changeSiteName(this.selectedIndex)"></select>
         <span id="showbox"></span>
         <br>
         <span class="spandate" id="spandate"></span>
       </form>
     </div>
-	<p id="rest"></p>
-    <div class="content">
-        <div class="SO2"><br><p id="SO2">100</p></div>
-        <div class="STU"><p id="STU">500</p></div>
-        <div class="CO"><p id="CO">500</p></div>
-        <div class="CO8H"><p id="CO8H">500</p></div>
-        <div class="AQI"><p id="AQI">500</p></div>
+  <div class="content">
+    <div class="SO2"><br><p id="SO2">100</p></div>
+    <div class="STU"><p id="STU">500</p></div>
+    <div class="NO"><p id="NO">500</p></div>
+    <div class="CO8H"><p id="CO8H">500</p></div>
+    <div class="AQI"><p id="AQI">500</p></div>
 		
 		<div class="sweetheart"><h1>二氧化硫</h1></div>
 		<div class="sweetheart"><h1>狀態</h1></div>
