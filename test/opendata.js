@@ -159,7 +159,7 @@
                   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
                   cpf.request('["grove_rgblcd_set_rgb", 0, 255, 0]');                  
                   cpf.request('["grove_rgblcd_print", 0, 1, "Normal"]'); //設定文字
-                  cpf.request('["digitalWrite", 6 , 0]');
+                  cpf.request('["digitalWrite", 6 , 1]');
                       console.log("普通");
                   break;
                 // case "對敏感族群不健康":
