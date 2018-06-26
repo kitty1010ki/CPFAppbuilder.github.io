@@ -16,7 +16,7 @@ function setup(){
                   cpf.setPinMode('["resetPin"],["grove_rgblcd_begin", 16, 2],["setPinMode", "digital", 5, "TONE"],["setPinMode", "digital", 6, "OUTPUT"]');
               }
           }
- if (y=="change")
+ if (tt=="change")
  {
      cpf.SetSpeech("On","cmn-Hant-TW",SiteName+"狀態良好",0.1,2);
                   cpf.request('["digitalWrite", 6 , 0]');
@@ -25,7 +25,7 @@ function setup(){
                   cpf.request('["grove_rgblcd_print", 0, 1, "Good"]'); //設定文字
                   
  }
-       else if(y=="普通")
+       else if(tt=="普通")
            {
               cpf.request('["tone_play", 5, 261, 300]');
                   cpf.request('["digitalWrite", 6 , 0]');
