@@ -8,7 +8,7 @@
 </head>
 <body>
   <p id="y">change</p>
-    <p>3</p>
+    <p>4</p>
    <script>
        var tt=document.getElementById("y");
 function setup(){
@@ -18,7 +18,7 @@ function setup(){
           }
  if (tt=="change")
  {
-     cpf.SetSpeech("On","cmn-Hant-TW",SiteName+"狀態良好",0.1,2);
+     cpf.SetSpeech("On","cmn-Hant-TW","狀態良好",0.1,2);
                   cpf.request('["digitalWrite", 6 , 0]');
                   cpf.request('["grove_rgblcd_clear"]');  //清空文字     
                   cpf.request('["grove_rgblcd_set_rgb", 0, 255, 0]');                  
